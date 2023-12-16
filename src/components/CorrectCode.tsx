@@ -1,12 +1,20 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Center, Text, VStack } from "@chakra-ui/react";
 
 const CorrectCode = () => {
-  const tinderGoldCode = process.env.REACT_APP_TINDER_GOLD_CODE;
+  const tinderGoldCode = import.meta.env.VITE_TINDER_CODE;
 
   return (
     <Box width={"4xl"} mb={40}>
-      Żart, nie ma następnego poziomu, trzymaj kodzik do Tinder Gold:{" "}
-      {tinderGoldCode}
+      <Center>
+        <VStack gap={5}>
+          <Text>
+            Żart, nie ma następnego poziomu. Trzymaj kodzik do Tinder Gold:{" "}
+          </Text>
+          <Text as="span" fontSize={"5xl"} color="gold" fontWeight="bold">
+            {tinderGoldCode}
+          </Text>
+        </VStack>
+      </Center>
     </Box>
   );
 };

@@ -19,7 +19,7 @@ const Puzzles: React.FC = () => {
         <ListItem>
           2. Rozwiąż całkę: <br />
           <Center>
-            &#8747;&#8747;&#8747;(xy) dV <br />
+            1/18 * &#8747;&#8747;&#8747;(xy) dV <br />
             V=&#123;(x,y,z)&#x2223; z &#x2264; 36 &#x2212; 9x &#x2212; 4y, z
             &#x2265; 0, x&#x2265;0, y&#x2265;0&#125;
           </Center>
