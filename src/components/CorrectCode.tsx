@@ -4,13 +4,18 @@ const CorrectCode = () => {
   const tinderGoldCode = import.meta.env.VITE_TINDER_CODE;
 
   return (
-    <Box width={"4xl"} mb={40}>
+    <Box width={{ base: "full", md: "80%", xl: "4xl" }} marginX="auto" mb={40}>
       <Center>
-        <VStack gap={5}>
-          <Text>
+        <VStack spacing={5} align="center">
+          <Text textAlign="center">
             Żart, nie ma następnego poziomu. Trzymaj kodzik do Tinder Gold:{" "}
           </Text>
-          <Text as="span" fontSize={"5xl"} color="gold" fontWeight="bold">
+          <Text
+            as="span"
+            fontSize={{ base: "3xl", md: "5xl" }}
+            color="gold"
+            fontWeight="bold"
+          >
             {tinderGoldCode}
           </Text>
         </VStack>

@@ -33,20 +33,23 @@ const CodeInput: React.FC<CodeInputProps> = ({ onCodeSubmit }) => {
   };
 
   return (
-    <Box width={"4xl"} mb={40}>
+    <Box width={{ base: "100%", md: "80%", xl: "4xl" }} marginX="auto" mb={40}>
       <Puzzles />
       <form onSubmit={handleSubmit}>
-        <HStack justify={"space-evenly"} mt={20}>
+        <HStack
+          justify={{ base: "center", md: "space-between" }}
+          mt={{ base: 8, md: 20 }}
+        >
           <Box />
-          <HStack>
-            <PinInput size={"lg"} onChange={setInputCode}>
+          <HStack spacing={4}>
+            <PinInput size={{ base: "md", md: "lg" }} onChange={setInputCode}>
               <PinInputField />
               <PinInputField />
               <PinInputField />
               <PinInputField />
             </PinInput>
           </HStack>
-          <Button type="submit" colorScheme="blue" mt={2}>
+          <Button type="submit" colorScheme="blue">
             Submit
           </Button>
         </HStack>
